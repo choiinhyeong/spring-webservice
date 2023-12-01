@@ -10,4 +10,5 @@ public class WebController {
     public String redirectHome(){
         return "redirect:/home";
     }
+
 }
