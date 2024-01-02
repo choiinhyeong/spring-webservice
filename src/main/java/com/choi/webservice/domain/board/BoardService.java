@@ -17,19 +17,19 @@ public class BoardService {
         return boardMapper.selectBoardList(boardDto);
     }
 
-    public BoardDto selectBoard(long boardNo) {
-        return boardMapper.selectBoard(boardNo);
+    public BoardDto selectBoard(long boardSeq) {
+        return boardMapper.selectBoard(boardSeq);
     }
 
     public int insertBoard(BoardDto boardDto) {
         return boardMapper.insertBoard(boardDto);
     }
 
-    public int updateBoard(long boardNo) {
-        return boardMapper.updateBoard(boardNo);
+    public int updateBoard(long boardSeq) {
+        return boardMapper.updateBoard(boardSeq);
     }
 
-    public int deleteBoard(long boardNo) {
-        return boardMapper.deleteBoard(boardNo);
+    public int deleteBoard(long boardSeq) {
+        return boardMapper.deleteBoard(boardSeq);
     }
 }

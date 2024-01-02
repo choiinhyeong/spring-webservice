@@ -16,10 +16,10 @@ public class WebRestController {
 
     private final BoardService boardService;
 
-    @GetMapping("/home")
-    public String home() {
-        log.info("/home");
-        return "home";
+    @GetMapping("/main")
+    public String mainPage() {
+        log.info("/main");
+        return "Main Page";
     }
 
     @PostMapping("/posts")

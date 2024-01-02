@@ -24,9 +24,9 @@ public class BoardController {
         return new CommonResponse.Builder().addItems(items).build();
     }
 
-    @GetMapping("/{boardNo}")
-    public CommonResponse selectBoardList(@PathVariable("boardNo") long boardNo) {
-        BoardDto item = boardService.selectBoard(boardNo);
+    @GetMapping("/{boardSeq}")
+    public CommonResponse selectBoardList(@PathVariable("boardSeq") long boardSeq) {
+        BoardDto item = boardService.selectBoard(boardSeq);
         return new CommonResponse.Builder().addData("item", item).build();
     }
 
@@ -34,23 +34,23 @@ public class BoardController {
     public CommonResponse insertBoard(BoardDto boardDto) {
         int result = boardService.insertBoard(boardDto);
         return new CommonResponse.Builder().addDataResultCode(CommonUtils.getCommonResultCode(result))
-                .addData("boardNo", boardDto.getBoardNo())
+                .addData("boardSeq", boardDto.getBoardSeq())
                 .build();
     }
 
-    @PatchMapping("/{boardNo}")
-    public CommonResponse updateBoard(@PathVariable("boardNo") long boardNo) {
-        int result = boardService.updateBoard(boardNo);
+    @PatchMapping("/{boardSeq}")
+    public CommonResponse updateBoard(@PathVariable("boardSeq") long boardSeq) {
+        int result = boardService.updateBoard(boardSeq);
         return new CommonResponse.Builder().addDataResultCode(CommonUtils.getCommonResultCode(result))
-                .addData("boardNo", boardNo)
+                .addData("boardSeq", boardSeq)
                 .build();
     }
 
-    @DeleteMapping("/{boardNo}")
-    public CommonResponse deleteBoard(@PathVariable("boardNo") long boardNo) {
-        int result = boardService.deleteBoard(boardNo);
+    @DeleteMapping("/{boardSeq}")
+    public CommonResponse deleteBoard(@PathVariable("boardSeq") long boardSeq) {
+        int result = boardService.deleteBoard(boardSeq);
         return new CommonResponse.Builder().addDataResultCode(CommonUtils.getCommonResultCode(result))
-                .addData("boardNo", boardNo)
+                .addData("boardSeq", boardSeq)
                 .build();
     }
 

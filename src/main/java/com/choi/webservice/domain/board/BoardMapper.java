@@ -13,7 +13,7 @@ public interface BoardMapper {
     );
 
     BoardDto selectBoard(
-            @Param("boardNo") long boardNo
+            @Param("boardSeq") long boardSeq
     );
 
     int insertBoard(
@@ -21,10 +21,10 @@ public interface BoardMapper {
     );
 
     int updateBoard(
-            @Param("boardNo") long boardNo
+            @Param("boardSeq") long boardSeq
     );
 
     int deleteBoard(
-            @Param("boardNo") long boardNo
+            @Param("boardSeq") long boardSeq
     );
 }

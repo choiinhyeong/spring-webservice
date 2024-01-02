@@ -10,15 +10,11 @@ import lombok.Setter;
 
 import java.sql.Timestamp;
 
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Setter
-@Entity // 테이블과 링크될 클래스임을 나타냄
 public class BoardDto {
 
-    @Id
-    @GeneratedValue
-    private Long boardNo;
+    private Long boardSeq;
     private String title;
     private String content;
     private String author;

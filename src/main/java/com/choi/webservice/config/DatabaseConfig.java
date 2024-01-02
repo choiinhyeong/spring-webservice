@@ -12,11 +12,4 @@ import org.springframework.context.annotation.PropertySource;
 @RequiredArgsConstructor
 public class DatabaseConfig {
 
-    @Value("${database.url}")
-    private String url;
-    @Value("${database.username}")
-    private String username;
-    @Value("${database.password}")
-    private String password;
-
 }
